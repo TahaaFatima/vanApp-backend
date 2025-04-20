@@ -4,6 +4,8 @@ module.exports = (sequelize, DataTypes) => {
       phone: DataTypes.STRING,
       role: DataTypes.ENUM('parent', 'driver'),
       profilePicture: DataTypes.STRING,
+      password: {  type: DataTypes.STRING,
+        allowNull: false, },
     });
   
     User.associate = (models) => {
