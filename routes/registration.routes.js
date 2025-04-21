@@ -5,10 +5,6 @@ const registrationController = require('../controllers/registration.controller')
 
 // Parent registration
 router.post('/parent', upload.single('profilePicture'), registrationController.registerParent);
-router.get('/parent', (req, res) => {
-  console.log('GET /parent route hit');
-  res.send('Parent route accessed');
-});
 
 // Driver registration
 router.post(
