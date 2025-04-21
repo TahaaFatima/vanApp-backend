@@ -48,6 +48,7 @@ exports.registerParent = async (req, res) => {
 exports.registerDriver = async (req, res) => {
   try {
     const {
+      name,
       email,
       phone,
       password,
@@ -62,6 +63,7 @@ exports.registerDriver = async (req, res) => {
     const user = await User.create({ email, phone, role: 'driver', profilePicture });
 
     await Driver.create({
+      name,
       userId: user.id,
       password,
       cnicOrLicensePath,

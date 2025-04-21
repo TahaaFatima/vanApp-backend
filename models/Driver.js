@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Driver = sequelize.define('Driver', {
+      name: DataTypes.STRING,
       password: DataTypes.STRING,
       cnicOrLicensePath: DataTypes.STRING,
       vehicleRegNumber: DataTypes.STRING,
